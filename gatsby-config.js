@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/vaccine-scheduler",
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "Vaccine Scheduler",

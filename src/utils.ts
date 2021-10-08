@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+// todo: move to storage.ts?
+
 export interface StorageData {
   dob: string;
   sex: 'male' | 'female';
@@ -18,11 +20,11 @@ export function useStorage() {
 
 export function useStorageState(key: keyof StorageData, defaultValue = '') {
   const [ value, setValue ] = React.useState(() => {
-    const storedValue = window.localStorage.getItem(key);
+    const storedValue = typeof window !== "undefined" ? window.localStorage.getItem(key) : null;
     return storedValue !== null ? storedValue : defaultValue;
   });
   React.useEffect(() => {
-    window.localStorage.setItem(key, value);
+    typeof window !== "undefined" && window.localStorage.setItem(key, value);
   }, [ key, value ]);
   return [ value, setValue ] as [ string, React.Dispatch<React.SetStateAction<string>> ];
 }
