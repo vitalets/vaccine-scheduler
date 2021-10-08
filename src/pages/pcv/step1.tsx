@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import Link from '../../components/Link';
 import { useStorageState } from '../../utils';
 import { navigate } from 'gatsby';
+import { LINKS } from './helpers/links';
 
 export default function Step1() {
   const [ dob, setDob ] = useStorageState('dob');
@@ -19,7 +20,7 @@ export default function Step1() {
   const handleNext = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (event.currentTarget.reportValidity()) {
-      navigate('../step2');
+      navigate(LINKS.step2);
     }
   };
 
@@ -61,7 +62,7 @@ export default function Step1() {
             </FormControl>
           </Grid>
           <Grid item xs={6} sm={3}>
-            <Button to=".." fullWidth component={Link} variant="outlined" color="primary">Назад</Button>
+            <Button to={LINKS.start} fullWidth component={Link} variant="outlined" color="primary">Назад</Button>
           </Grid>
           <Grid item xs={6} sm={3}>
             <Button fullWidth type="submit" variant="contained" color="primary">Дальше</Button>

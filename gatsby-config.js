@@ -30,6 +30,7 @@ module.exports = {
       options: {
         name: "pages",
         path: "./src/pages/",
+        ignore: [`**/helpers/**`]
       },
       __key: "pages",
     },

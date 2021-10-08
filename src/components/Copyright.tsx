@@ -13,7 +13,6 @@ export default function Copyright() {
        НКО «Коллективный иммунитет»
       </Link>{' '}
       {new Date().getFullYear()}
-      {'.'}
     </Typography>
     </>
   );
