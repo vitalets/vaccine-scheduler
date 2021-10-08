@@ -32,5 +32,14 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      // растягивание текста по ширине тоже не очень смотрится
+      // options: {
+      //   defaultLayouts: {
+      //     default: require.resolve('./src/components/MDXLayout'),
+      //   },
+      // },
+    },
   ],
 };
