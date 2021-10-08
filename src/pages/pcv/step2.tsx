@@ -8,7 +8,7 @@ import FormGroup from '@mui/material/FormGroup';
 import Checkbox from '@mui/material/Checkbox';
 import { useStorage } from '../../utils';
 import { navigate } from 'gatsby';
-import { LINKS } from './helpers/links';
+import { LINKS } from './_links';
 
 function getCheckboxes(age: number, isMale: boolean) {
   return [

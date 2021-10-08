@@ -7,16 +7,14 @@ module.exports = {
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-transformer-remark",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    // "gatsby-plugin-sharp",
+    // "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -30,7 +28,6 @@ module.exports = {
       options: {
         name: "pages",
         path: "./src/pages/",
-        ignore: [`**/helpers/**`]
       },
       __key: "pages",
     },

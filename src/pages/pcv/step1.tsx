@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import Link from '../../components/Link';
 import { useStorageState } from '../../utils';
 import { navigate } from 'gatsby';
-import { LINKS } from './helpers/links';
+import { LINKS } from './_links';
 
 export default function Step1() {
   const [ dob, setDob ] = useStorageState('dob');
